@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/temperatura"
+        android:icon="@drawable/ic_temperatura"
+        android:title="Temperatura"/>
+    <item
+        android:id="@+id/medicamento"
+        android:icon="@drawable/ic_temperatura"
+        android:title="Medicamento" />
+    <item
+        android:id="@+id/vacunas"
+        android:icon="@drawable/ic_vacunas"
+        android:title="Vacunas" />
+</menu>

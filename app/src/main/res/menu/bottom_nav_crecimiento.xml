@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/estarura"
+        android:icon="@drawable/ic_estatura"
+        android:title="Estatura"/>
+    <item
+        android:id="@+id/peso"
+        android:icon="@drawable/ic_peso"
+        android:title="Peso" />
+    <item
+        android:id="@+id/resumen"
+        android:icon="@drawable/ic_resumen"
+        android:title="Resumen" />
+</menu>

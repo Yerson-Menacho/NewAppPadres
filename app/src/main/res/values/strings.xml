@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Happy Baby</string>
+    <string name="navigation_drawer_open">Abrir menú de navegación</string>
+    <string name="navigation_drawer_close">Cerrar menú de navegación</string>
+
+    <string name="abrir">abrir</string>
+    <string name="cerrar">cerrar</string>
+
+    <string name="edit_profile_icon">Editar perfil</string>
+</resources>

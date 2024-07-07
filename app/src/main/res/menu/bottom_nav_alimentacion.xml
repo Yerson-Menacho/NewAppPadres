@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/pecho"
+        android:icon="@drawable/ic_temperatura"
+        android:title="Pecho" />
+    <item
+        android:id="@+id/biberon"
+        android:icon="@drawable/ic_temperatura"
+        android:title="Biberon" />
+    <item
+        android:id="@+id/solidos"
+        android:icon="@drawable/ic_vacunas"
+        android:title="Solidos" />
+</menu>

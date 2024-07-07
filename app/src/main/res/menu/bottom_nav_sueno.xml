@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/hora_suenio"
+        android:icon="@drawable/ic_suenio"
+        android:title="Horas Sueño" />
+    <item
+        android:id="@+id/Resumen"
+        android:icon="@drawable/ic_resumen"
+        android:title="Resumen" />
+</menu>

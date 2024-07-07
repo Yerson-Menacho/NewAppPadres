@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/lavender_border"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:textAlignment="center"
+                app:cardCornerRadius="10dp">
+
+                <TextView
+                    android:id="@+id/tersero"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Buenos dias Usuario"
+                    android:textAlignment="center"
+                    android:textColor="#E07E62"
+                    android:textSize="27sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/bebe"
+                    android:layout_width="122dp"
+                    android:layout_height="112dp"
+                    android:layout_marginStart="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:srcCompat="@drawable/t" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/lavender_border"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/corazon1"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/corazon" />
+
+                <TextView
+                    android:id="@+id/Novedades"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/corazon1"
+                    android:layout_toRightOf="@+id/corazon1"
+                    android:text="Novedades y noticias"
+                    android:textColor="#E07E62"
+                    android:textSize="25sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/Noticias"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="70dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/lavender_border"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/corazon2"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/corazon" />
+
+                <TextView
+                    android:id="@+id/NombreTarea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/corazon2"
+                    android:layout_toRightOf="@+id/corazon2"
+                    android:text="Nombre de la tarea"
+                    android:textColor="#E07E62"
+                    android:textSize="27sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/tarea1"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="70dp"
+                    app:srcCompat="@drawable/rojo" />
+
+                <Button
+                    android:id="@+id/Tarea1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_toEndOf="@+id/tarea1"
+                    android:layout_toRightOf="@+id/tarea1"
+                    android:backgroundTint="#18B172"
+                    android:text="tarea 1"
+                    android:textColor="#0C47FD"
+                    android:textSize="22sp">
+
+                </Button>
+
+                <ImageView
+                    android:id="@+id/tarea2"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="122dp"
+                    app:srcCompat="@drawable/rojo" />
+
+                <Button
+                    android:id="@+id/Tarea2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="122dp"
+                    android:layout_toEndOf="@+id/tarea2"
+                    android:layout_toRightOf="@+id/tarea2"
+                    android:backgroundTint="#18B172"
+                    android:text="tarea 1"
+                    android:textColor="#0C47FD"
+                    android:textSize="22sp">
+
+                </Button>
+
+                <ImageView
+                    android:id="@+id/tarea3"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="172dp"
+                    app:srcCompat="@drawable/rojo" />
+
+                <Button
+                    android:id="@+id/Tarea3"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="172dp"
+                    android:layout_toEndOf="@+id/tarea3"
+                    android:layout_toRightOf="@+id/tarea3"
+                    android:backgroundTint="#18B172"
+                    android:text="tarea 1"
+                    android:textColor="#0C47FD"
+                    android:textSize="22sp">
+
+                </Button>
+
+                <ImageView
+                    android:id="@+id/tarea4"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="222dp"
+                    app:srcCompat="@drawable/rojo" />
+
+                <Button
+                    android:id="@+id/Tarea4"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="222dp"
+                    android:layout_toEndOf="@+id/tarea4"
+                    android:layout_toRightOf="@+id/tarea4"
+                    android:backgroundTint="#18B172"
+                    android:text="tarea 1"
+                    android:textColor="#0C47FD"
+                    android:textSize="22sp">
+
+                </Button>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

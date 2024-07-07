@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="190dp"
+    android:gravity="bottom"
+    android:padding="5dp"
+    android:background="@drawable/header"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <!-- Layout horizontal para la imagen y los textos -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="-150dp">
+
+        <ImageView
+            android:id="@+id/fotoPerfil"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/perfil"
+            android:layout_marginRight="5dp" />
+
+        <!-- Layout vertical para los textos -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/lblnombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre completo del usuario"
+                android:textColor="#FFFDFD"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/lblemail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="usuario@gmail.com"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/editarPerfil"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/edit_p"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/edit_profile_icon"
+            android:background="@drawable/edit_profile_border"/>
+    </LinearLayout>
+
+</LinearLayout>
+

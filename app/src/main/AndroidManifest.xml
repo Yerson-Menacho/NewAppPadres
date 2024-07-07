@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/t"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/t"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.NewAppPadres"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activity_Registrar"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity android:name=".Salud.SaludActivity" />
+        <activity android:name=".Crecimiento.Crecimiento" />
+        <activity android:name=".Alimentacion.Alimentacion" />
+        <activity android:name=".Suenio.Suenio" />
+        <activity android:name=".Fragment.DetalleTareaActivity" />
+        <activity android:name=".ActivityEditarPerfil" />
+    </application>
+
+</manifest>

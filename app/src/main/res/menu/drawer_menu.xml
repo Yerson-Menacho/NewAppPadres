@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Principal">
+        <menu>
+            <item
+                android:id="@+id/Home"
+                android:icon="@drawable/ic_home"
+                android:title="Home" />
+            <item
+                android:id="@+id/Tareas"
+                android:icon="@drawable/ic_task"
+                android:title="Tareas para el Padre" />
+
+            <item
+                android:id="@+id/Videos"
+                android:icon="@drawable/ic_modulo"
+                android:title="Modulo de seguimiento del bebe" />
+            <item
+                android:id="@+id/Comunidad"
+                android:icon="@drawable/ic_community"
+                android:title="Comunidad y soporte" />
+            <item
+                android:id="@+id/Shop"
+                android:icon="@drawable/ic_shop"
+                android:title="Tienda" />
+        </menu>
+    </item>
+    <item android:title="Comunicate">
+        <menu>
+            <item
+                android:id="@+id/configuracion"
+                android:icon="@drawable/ic_settings"
+                android:title="Configuración" />
+            <item
+                android:id="@+id/nosotros"
+                android:icon="@drawable/ic_info"
+                android:title="Sobre nosotros" />
+        </menu>
+    </item>
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/Salir"
+                android:icon="@drawable/ic_exit"
+                android:title="Salir" />
+        </menu>
+    </item>
+</menu>
+

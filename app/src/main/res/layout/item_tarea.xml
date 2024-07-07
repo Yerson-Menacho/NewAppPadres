@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imagnLista"
+            android:src="@drawable/t" />
+
+        <TextView
+            android:id="@+id/NombreTarea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre de la tarea"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/imagnLista"
+            android:layout_toEndOf="@+id/imagnLista"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/DetalleTarea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="detalles de tarea"
+            android:layout_below="@+id/NombreTarea"
+            android:layout_toEndOf="@+id/imagnLista"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp" />
+
+        <ProgressBar
+            android:id="@+id/progresoTarea"
+            android:layout_width="250dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/DetalleTarea"
+            android:layout_toEndOf="@+id/imagnLista"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progress="50"
+            android:max="100"
+            android:progressDrawable="@drawable/progress_bar_states" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
