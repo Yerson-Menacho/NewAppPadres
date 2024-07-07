@@ -12,7 +12,19 @@
         android:textAlignment="center"
         android:theme="@style/ThemeOverlay.AppCompat.Dark"
         app:title="Sueño del bebe"
-        app:titleTextColor="@android:color/white" />
+        app:titleTextColor="@android:color/white">
+
+        <ImageView
+            android:id="@+id/infoIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/info_icon_description"
+            android:src="@drawable/ic_info"
+            android:onClick="showInfoTooltip"
+            app:tint="@color/white" />
+    </androidx.appcompat.widget.Toolbar>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"

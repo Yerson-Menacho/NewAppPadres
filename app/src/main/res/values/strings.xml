@@ -9,4 +9,6 @@
     <string name="edit_profile_icon">Editar perfil</string>
 
     <string name="search">Buscar</string>
+
+    <string name="info_icon_description">Descripción del icono de información</string>
 </resources>

@@ -1,18 +1,35 @@
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
         android:background="#0D91D3"
         android:elevation="4dp"
         android:textAlignment="center"
         android:theme="@style/ThemeOverlay.AppCompat.Dark"
         app:title="Salud del bebe"
-        app:titleTextColor="@android:color/white" />
+        app:titleTextColor="@android:color/white">
+
+        <!-- Aquí se añade el icono de información -->
+        <ImageView
+            android:id="@+id/infoIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/info_icon_description"
+            android:src="@drawable/ic_info"
+            android:onClick="showInfoTooltip"
+            app:tint="@color/white"
+            tools:ignore="UsingOnClickInXml" />
+
+    </androidx.appcompat.widget.Toolbar>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -32,4 +49,5 @@
         android:layout_marginTop="?attr/actionBarSize"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 
