@@ -15,5 +15,7 @@
     <color name="verde">#008000</color>
 
     <color name="edit_profile_border_color">#178BAF</color>
+
+    <color name="searchIconColor">#FFFFFF</color>
 </resources>
 

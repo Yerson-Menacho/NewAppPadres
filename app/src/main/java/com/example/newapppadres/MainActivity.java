@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
@@ -13,9 +15,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
 
 import com.example.newapppadres.BD.bdUsuarios;
 import com.example.newapppadres.Fragment.FragmentComunidad;
@@ -96,6 +100,71 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) searchItem.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                searchFragments(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                searchFragments(newText);
+                return false;
+            }
+        });
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.action_search) {
+            // Aquí maneja la acción cuando se selecciona el ícono de búsqueda
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
+        }
+    }
+
+
+    private void searchFragments(String query) {
+        if (query.isEmpty()) {
+            return;
+        }
+
+        Fragment fragment = null;
+        String queryLower = query.toLowerCase();
+
+        if (queryLower.contains("home")) {
+            fragment = new HomeFragment();
+        } else if (queryLower.contains("tareas")) {
+            fragment = new FragmentTareas();
+        } else if (queryLower.contains("comunidad")) {
+            fragment = new FragmentComunidad();
+        } else if (queryLower.contains("shop")) {
+            fragment = new FragmentShop();
+        } else if (queryLower.contains("seguimiento")) {
+            fragment = new FragmentModuloSeguimiento();
+        } else if (queryLower.contains("configuracion")) {
+            fragment = new FragmentConfiguracion();
+        } else if (queryLower.contains("nosotros")) {
+            fragment = new FragmentNosotros();
+        }
+
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+        }
+    }
+
+    @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int itemId = item.getItemId();
         if (itemId == R.id.Home) {
@@ -106,7 +175,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentComunidad()).commit();
         } else if (itemId == R.id.Shop) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentShop()).commit();
-        } else if (itemId == R.id.Videos) {
+        } else if (itemId == R.id.Seguimiento) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentModuloSeguimiento()).commit();
         } else if (itemId == R.id.configuracion) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentConfiguracion()).commit();
@@ -119,7 +188,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             finish(); // Finalizar la actividad principal
         }
 
-        drawer.close();
+        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 

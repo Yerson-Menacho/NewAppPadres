@@ -12,7 +12,7 @@
                 android:title="Tareas para el Padre" />
 
             <item
-                android:id="@+id/Videos"
+                android:id="@+id/Seguimiento"
                 android:icon="@drawable/ic_modulo"
                 android:title="Modulo de seguimiento del bebe" />
             <item

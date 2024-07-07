@@ -7,4 +7,6 @@
     <string name="cerrar">cerrar</string>
 
     <string name="edit_profile_icon">Editar perfil</string>
+
+    <string name="search">Buscar</string>
 </resources>
