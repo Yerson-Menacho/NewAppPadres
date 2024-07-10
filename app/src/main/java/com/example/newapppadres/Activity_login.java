@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -13,6 +14,7 @@ import android.text.style.ForegroundColorSpan;
 import android.text.style.UnderlineSpan;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +27,10 @@ public class Activity_login extends AppCompatActivity {
 
     private ActivityLoginBinding binding;
     private bdUsuarios BD;
+    private ImageButton facebookButton;
+    private ImageButton instagramButton;
+    private ImageButton whatsappButton;
+    private ImageButton youtubeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +41,39 @@ public class Activity_login extends AppCompatActivity {
 
         BD = new bdUsuarios(this);
         Log.d("Activity_login", "onCreate: Login activity started");
+
+        facebookButton = findViewById(R.id.facebook);
+        instagramButton = findViewById(R.id.instagram);
+        whatsappButton = findViewById(R.id.whatsapp);
+        youtubeButton = findViewById(R.id.youtube);
+
+        facebookButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                abrirPaginaWeb("https://www.facebook.com");
+            }
+        });
+
+        instagramButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                abrirPaginaWeb("https://www.instagram.com");
+            }
+        });
+
+        whatsappButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                abrirPaginaWeb("https://wa.me/");
+            }
+        });
+
+        youtubeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                abrirPaginaWeb("https://www.youtube.com");
+            }
+        });
 
         binding.Login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,12 +104,10 @@ public class Activity_login extends AppCompatActivity {
             }
         });
 
-        // Subrayar y hacer clicable el texto "Inicia Sesión"
         TextView IrRegistrate = binding.IrRegistrar;
         String text = "Ya eres usuario? Registrate";
         SpannableString spannableString = new SpannableString(text);
 
-        // Subrayar "Inicia Sesion" y hacerlo clicable
         int startIndex = text.indexOf("Registrate");
         int endIndex = startIndex + "Registrate".length();
         spannableString.setSpan(new UnderlineSpan(), startIndex, endIndex, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -85,6 +122,12 @@ public class Activity_login extends AppCompatActivity {
 
         IrRegistrate.setText(spannableString);
         IrRegistrate.setMovementMethod(LinkMovementMethod.getInstance());
+    }
+
+    private void abrirPaginaWeb(String url) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        startActivity(intent);
     }
 
     private void guardarEmailSharedPreferences(String email) {
